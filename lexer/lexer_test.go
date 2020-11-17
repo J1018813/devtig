@@ -9,7 +9,7 @@ import (
 func TestNextToken(t *testing.T) {
 	input := `eris five = 5;
 	eris ten = 10;
-	eris add = fn(x, y) {
+	eris add = zal(x, y) {
 	x + y;
 	};
 	eris result = add(five, ten);
@@ -32,7 +32,7 @@ func TestNextToken(t *testing.T) {
 		{token.ERIS, "eris"},
 		{token.IDENT, "add"},
 		{token.ASSIGN, "="},
-		{token.FUNCTION, "fn"},
+		{token.FUNCTION, "zal"},
 		{token.LPAREN, "("},
 		{token.IDENT, "x"},
 		{token.COMMA, ","},

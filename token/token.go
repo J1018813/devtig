@@ -32,3 +32,16 @@ const (
 	FUNCTION = "FUNCTION"
 	ERIS     = "ERIS"
 )
+
+var keywords = map[string]TokenType{
+	"zal":  FUNCTION,
+	"eris": ERIS,
+}
+
+func LookupIndent(indent string) TokenType {
+	if tok, ok := keywords[indent]; ok {
+		return tok
+	}
+
+	return IDENT
+}
